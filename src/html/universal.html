@@ -1,0 +1,133 @@
+---
+author: Frontend Team
+ourTeam: My Team
+---
+{% from 'macros/lazyimages.html' import lazyimages %}
+{% from 'macros/form.html' import formBlock, formHorizontal, select, selectHorizontal, textarea, textareaHorizontal %} 
+{% extends 'layouts/application.html' %}{% block bodyClass %}class="page-internal"{% endblock %}
+{% block content %}
+<main id="main-content" role="main">
+    {% include "modules/homepage/mod-banner.html" %} 
+    {% include "modules/mod-about-company.html" %}
+    {% include "modules/mod-send-message.html" %}
+    {% include "modules/mod-residental.html" %}
+    <div class="space-90 space-mb-20"></div>
+    {% include "modules/modconnection.html" %}
+    <div class="space-100"></div>
+    {% include "modules/mod-general-electrical.html" %}
+    {% include "modules/mod-contruction.html" %}
+    <div class="space-90 space-mb-20"></div>
+  <div class="container">
+    <h1>{{ author }} {{ ourTeam }}</h1>
+		<h2>Headline style h2 </h2>
+		<h3>Headline <a href="#">style H3</a></h3>
+		<h4>Headline style H4</h4>
+		<h5>Headline style H5</h5>
+    <h6>Headline style H6</h6>
+    <ul>
+      <li>provide specific training and certifications to tower
+        <a href="#">climbers and managers in the field</a>
+      </li>
+      <li>provide specific training and certifications to tower climbers and managers in the field</li>
+      <li>provide specific training and certifications to tower climbers and managers in the field</li>
+      <li>provide specific training and certifications to tower climbers and managers in the field</li>
+      <li>provide specific training and certifications to tower climbers and managers in the field</li>
+    </ul>
+    <ol>
+      <li>provide specific training and certifications to tower
+        <a href="#">climbers and managers in the field</a>
+      </li>
+      <li>provide specific training and certifications to tower climbers and managers in the field</li>
+      <li>provide specific training and certifications to tower climbers and managers in the field</li>
+      <li>provide specific training and certifications to tower climbers and managers in the field</li>
+      <li>provide specific training and certifications to tower climbers and managers in the field</li>
+    </ol>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries
+    </p>
+    <div class="bg-primary color-white p-4">
+      <h1>{{ author }} {{ ourTeam }}</h1>
+      <h2>Headline style h2 </h2>
+      <h3>Headline <a href="#">style H3</a></h3>
+      <h4>Headline style H4</h4>
+      <h5>Headline style H5</h5>
+      <h6>Headline style H6</h6>
+      <ul>
+        <li>provide specific training and certifications to tower
+          <a href="#">climbers and managers in the field</a>
+        </li>
+        <li>provide specific training and certifications to tower climbers and managers in the field</li>
+        <li>provide specific training and certifications to tower climbers and managers in the field</li>
+        <li>provide specific training and certifications to tower climbers and managers in the field</li>
+        <li>provide specific training and certifications to tower climbers and managers in the field</li>
+      </ul>
+      <ol>
+        <li>provide specific training and certifications to tower
+          <a href="#">climbers and managers in the field</a>
+        </li>
+        <li>provide specific training and certifications to tower climbers and managers in the field</li>
+        <li>provide specific training and certifications to tower climbers and managers in the field</li>
+        <li>provide specific training and certifications to tower climbers and managers in the field</li>
+        <li>provide specific training and certifications to tower climbers and managers in the field</li>
+      </ol>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries
+      </p>
+    </div>
+    <div class="space-50"></div>
+    <div class="social">
+        {% include "modules/global/social.html" %}
+    </div>
+    {% include "modules/global/pagination.html" %}
+    <p>
+      <a href="#" class="btn btn-primary">Default Large CTA</a>
+    </p>
+    <p>
+      <a href="#" class="btn btn-outline-primary">Default Large CTA</a>
+    </p>
+    <p>
+      <a href="#" class="btn btn-danger">Default btn</a>
+    </p>
+    <p>
+      <a href="#" class="btn btn-outline-danger">Default btn</a>
+    </p>
+    <br>
+    <h3>Custom select js</h3>
+    {% include "modules/select-c8.html" %}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Field Title</label>
+          <input type="text" class="form-control" placeholder="Default Field">
+        </div>
+        <div class="form-group form-group-v2">
+            <div class="form-inner">
+              <label for="" class="label-animation">Animation</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="c-radio form-group">
+      <input type="radio" id="radio1" class="c-radio" name="radios3">
+      <label for="radio1">
+        <span class="box"></span> My Local Location
+      </label>
+    </div>
+    <div class="c-radio form-group">
+      <input type="radio" checked id="radio2" class="c-radio" name="radios3">
+      <label for="radio2">
+        <span class="box"></span> My Local Location
+      </label>
+    </div>
+    <div class="space-30"></div>
+  </div>
+
+
+  {% include "modules/mod-popup.html" %}
+</main>
+{% endblock %}

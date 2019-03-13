@@ -1,0 +1,9 @@
+.btn {
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+.btn-primary:hover{
+  border: 2px solid $indigo;
+  background: transparent;
+  color: $indigo;
+}

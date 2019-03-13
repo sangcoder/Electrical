@@ -1,0 +1,74 @@
+#header {
+  @include position(fixed, 0, 0, null, 0, 9999);
+  @extend %add-tr;
+  background-color: $white;
+  font-size: rem(18px);
+  font-weight: 700;
+  font-family: $ub;
+  &.pin-header {
+    box-shadow: 2px 9px 18px -6px rgba(0, 0, 0, .22);
+  }
+}
+
+#header-logo {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 40px 0 0;
+}
+
+@include media-breakpoint-up(lg) {
+  #header {
+    .navbar {
+      padding: 0 15px;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  #header {
+    .navbar{
+      display: block;
+    }
+  }
+  .header-mobile{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: -15px;
+    margin-left: -15px;
+    .col-mb-4,
+    .col-mb-8{
+      position: relative;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .col-mb-8{
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+    .col-mb-4{
+      flex: 0 0 25%;
+      max-width: 25%;
+      text-align: right;
+    }
+  }
+
+  html.is-open-menu,
+  html.is-open-menu body {
+    overflow: hidden;
+    height: 100%;
+  }
+  html.is-open-menu {
+    body {
+      @include position(absolute, 0, 0, null, 0, null);
+    }
+    #header {
+      bottom: 0;
+      height: 100%;
+      overflow-y: auto;
+      background: #f5f6f6;
+    }
+  }
+}

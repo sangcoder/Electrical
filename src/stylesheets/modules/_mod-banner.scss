@@ -1,0 +1,23 @@
+.mod-banner {
+  //
+}
+.banner-full-bg {
+  height: 480px;
+  background-position: bottom;
+  position: relative;
+
+  h2{
+    position: relative;
+    color: $white;
+    z-index: 2;
+    font-size: rem(80px);
+  }
+  .bg-overlay{
+    background: rgba(122, 188, 190, .65);
+  }
+  &::after {
+    content: "";
+    background: url("../images/banner-image.png") no-repeat;
+    @include position(absolute,230px, 0, 0, 0, 1);
+  }
+}

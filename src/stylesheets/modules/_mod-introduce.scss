@@ -1,0 +1,91 @@
+.mod-introduce{
+  //
+  position: relative;
+}
+
+.intro-left {
+  color: $white;
+  padding: 100px 40px;
+  .bg-orange {
+    @include position(absolute, 0, 0, 0, -150px);
+    background-color: $orange;
+  }
+  .intro-banner {
+    position: relative;
+  }
+  &::after{
+    content: "";
+    background: url("../images/intro-bg-left.png");
+    background-size: cover;
+    @include position(absolute, 405px, 0, 0, -52px);
+  }
+}
+
+.intro-right {
+  .bg-overlay{
+    background: rgba(122, 188, 190, .65);
+  }
+  .right-image {
+    background-size: cover !important;
+    @include position(absolute, 0, -150px, 0, 0);
+    &::after{
+      content: "";
+      background: url("../images/intro-bg-right.png");
+      @include position(absolute, 356px, 0, 0, -20px, 1);
+    }
+  }
+}
+
+.intro-content {
+  padding: 20px 0 40px;
+  h2{
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 0;
+    &::after {
+      content: "";
+      @include position(absolute, null, null, 3px, 0);
+      background-color: $indigo;
+      @include sizeEx(40px, 3px);
+      margin-bottom: -5px;
+    }
+  }
+}
+
+.line-light {
+  .light-1 {
+    @include position(absolute, 0, null, null, 50%, 1);
+    height: 900px;
+  }
+  .light-2{
+    @include position(absolute, 75%, null, null, 50%, 2);
+    width: 170px;
+    transform: translateX(-50%);
+  }
+}
+
+.intro-rectangle {
+  position: relative;
+  img {
+    @include position(relative,$index: 1);
+    opacity: .95;
+  }
+  &::after {
+    content: "";
+    @include position(absolute, -30px, null, -30px, 50%);
+    width: 160px;
+    background: #f06a23;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .intro-content {
+    max-width: 400px;
+    padding-bottom: 120px;
+    &.content-left{
+      margin-left: 70px;
+    }
+  }
+}

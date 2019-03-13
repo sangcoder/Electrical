@@ -1,0 +1,30 @@
+<!-- module 'Mod Residental' -->
+<section class="module mod-residental" data-module="mod-residental">
+  <div class="container">
+    <div class="residental-heading text-center">
+      <h2>
+        {{ residentalData.headingTitle }}
+        <img src="images/heading-bg.png" alt="">
+      </h2>
+    </div>
+    <div class="resindental-slide text-center">
+      {% for item in residentalData.listResidental %}
+      <div class="slide-item">
+        <div class="residental-img d-flex justify-content-center">
+          <img src="{{ item.avatar }}" alt="">
+        </div>
+        <div class="residental-content">
+          {{ item.content }}
+        </div>
+        <div class="residental-signature">
+          <img src="{{ item.signatureImg }}" alt="Jean">
+          <p>- Roger and Jean <br>
+             Slager Tucson, AZ</p>
+        </div>
+      </div>
+      {% endfor %}
+
+
+    </div>
+  </div>
+</section>

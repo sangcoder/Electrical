@@ -1,0 +1,29 @@
+<!-- module 'Mod About Company' -->
+<section class="module mod-about-company">
+  <div class="container">
+    <div class="company-heading">
+      <div class="heading-image">
+          {{aboutCompany.heading}}
+          <img src="images/heading-bg.png">
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 content-left">
+        {{ aboutCompany.aboutCompanyDesc }}
+      </div>
+      <div class="col-lg-6 content-right">
+        <div class="row ">
+          {% for item in aboutCompany.items %}
+          <div class="col-6 col-md-4 col-lg-6 company-item">
+            <div class="about-icon">
+              <img src="{{ item.imageUrl }}" alt=" {{ item.name }}">
+            </div>
+            {{ item.name }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>

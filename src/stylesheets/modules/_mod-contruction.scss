@@ -1,0 +1,20 @@
+// module 'Mod Contruction'
+.mod-contruction {
+  //
+}
+.contruct-left {
+  img {
+    display: inline-block;
+    @include position(absolute, -40px, null, null, -30px, 0);
+    width: 110px;
+  }
+}
+.contruct-right {
+  margin: 80px 0;
+}
+
+@include media-breakpoint-up(lg) {
+  .contruct-right {
+    margin: 0;
+  }
+}

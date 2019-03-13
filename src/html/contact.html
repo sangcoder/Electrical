@@ -1,0 +1,10 @@
+{% from 'macros/form.html' import formBlock, formHorizontal, select, selectHorizontal, textarea, textareaHorizontal %} {%
+from 'macros/helpers.html' import image %}
+{% extends 'layouts/application.html' %}
+{% block bodyClass %}class="page-internal"{%endblock %}
+{% block content %}
+<main id="main-content" role="main">
+  {% include "modules/mod-test.html" %}
+<div class="space-100"></div>
+</main>
+{% endblock %}

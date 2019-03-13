@@ -1,0 +1,50 @@
+.form-control {
+  //height: 40px;
+  appearance: none;
+  box-shadow: none !important;
+}
+
+textarea.form-control {
+  height: 220px;
+  resize: none;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 30px #1f86c6 inset;
+}
+
+.error {
+  border-color: $red !important;
+}
+
+.messages-error {
+  @include position(absolute, null, 0, -10px);
+  @include font(null, 12px, $red);
+  padding: 2px 6px;
+  margin-top: 2px;
+  display: none;
+  >div {
+    padding: 2px 6px;
+    background: $white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px $red;
+  }
+}
+
+.msg-input,
+.msg-textarea {
+  position: relative;
+}
+
+.form-group {
+  position: relative;
+  &.error {
+    border: none !important;
+    .form-control {
+      border-color: $red;
+    }
+    .messages-error {
+      display: block;
+    }
+  }
+}

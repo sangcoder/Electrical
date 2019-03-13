@@ -1,0 +1,55 @@
+/* loadding home */
+
+.loader {
+  @include position(fixed, 50%, null, null, 50%, 99999);
+  transform: translate(-50%, -50%);
+}
+
+.over-loader {
+  @include position(fixed, 0, 0, 0, 0, 99999);
+  background: $blue;
+}
+
+// demo loader
+.hide-loader {
+  display: none;
+}
+
+// end demo
+.loader-item {
+  width: 50px;
+  height: 40px;
+  margin: 100px auto;
+  font-size: 10px;
+  text-align: center;
+}
+
+.spinner {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  @include position(absolute, 0, 0, 0, 0, null);
+  background-color: $white;
+  border-radius: 50%;
+  opacity: .6;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: -1s;
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,33 @@
+<!-- module 'Mod Contruction' -->
+<section class="module mod-contruction">
+  <div class="container">
+      {% for item in contructionData.listContruction %}
+      {% if loop.index0 %2 == 0 %}
+      <div class="row ">
+      <div class="col-lg-6 contruct-left ">
+        <div class="heading-image">
+          {{ contructionData.headingTitle }}
+          <img src="images/heading-bg.png">
+        </div>
+        {{ item.paragraph }}
+      </div>
+      <div class="col-lg-6 struc-image">
+        <img src="{{ item.image }}" alt="contruction">
+      </div>
+    </div>
+    {% else %}
+    <div class="row flex-column-reverse flex-lg-row">
+      <div class="col-lg-6 contruct-right">
+        <div class="rectangle-orange">
+          <img src="{{ item.image }}" alt="Home view 1">
+        </div>
+      </div>
+      <div class="col-lg-6 contruct-content">
+        <h2>Renovations and </h2>
+        {{ item.paragraph }}
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>

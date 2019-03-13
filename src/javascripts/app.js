@@ -1,0 +1,18 @@
+import 'bootstrap/js/dist/util'
+import 'bootstrap/js/dist/dropdown'
+// import 'bootstrap/js/dist/collapse'
+// import '@fancyapps/fancybox/dist/jquery.fancybox'
+// import 'bootstrap-select'
+import 'slick-carousel/slick/slick'
+// import 'parsleyjs/dist/parsley'
+import 'jquery-lazy/jquery.lazy'
+import 'modules/UserAgent'
+// import 'modules/Counter'
+import 'modules/Header'
+// import 'modules/FixHeight'
+import 'modules/Menu'
+import 'modules/Popup'
+import 'modules/SelectC8'
+
+// ModResidental
+import 'modules/ModResidental'

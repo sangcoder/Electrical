@@ -1,0 +1,41 @@
+// module 'Modconnection'
+.modconnection {
+  //
+}
+.connection-icon {
+  height: 45px;
+}
+.connection-left {
+  position: relative;
+  margin: 80px 0;
+  .img-two {
+    width: 300px;
+    @include position(absolute, null, 7%, -55%, null);
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+}
+.connection-right {
+  //
+}
+.rectangle-orange{
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    width: 160px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    bottom: -35px;
+    background: $orange;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .connection-left {
+    margin: 0;
+  }
+}

@@ -1,0 +1,46 @@
+// module 'Mod Send Message'
+.mod-send-message {
+  //
+}
+.message-left {
+  padding: 30px 40px;
+  background: #ececec;
+}
+
+.message-right {
+  background-color: $orange;
+  padding: 80px 50px;
+  position: relative;
+  &::after {
+    content: "";
+    background: url("../images/contact-bg-before.png") no-repeat;
+    @include position(absolute, 67%, 0, 0, 0);
+  }
+}
+
+.heading-image {
+  p {
+    max-width: 555px;
+    margin-top: 20px;
+  }
+
+}
+
+.message-item {
+  display: flex;
+  color: $white;
+  margin-bottom: 20px;
+  .message-content {
+    margin-left: 20px;
+    &.phone {
+      font-size: 24px;
+      margin-left: 26px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  // .message-left {
+  //   padding: 30px 40px;
+  // }
+}

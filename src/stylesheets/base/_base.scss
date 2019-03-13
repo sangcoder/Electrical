@@ -1,0 +1,88 @@
+*:focus,
+button:focus,
+input:focus,
+*,
+input,
+button,
+*:active,
+input:active,
+button:active,
+.bootstrap-select .btn:focus,
+option {
+  outline: none !important;
+  outline: 0 !important;
+}
+
+html {
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: $white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  a {
+    @extend %link-inhert;
+    font-style: normal;
+    font-weight: inherit;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
+    }
+  }
+}
+
+ol,
+ul {
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  font-size: 1em;
+  font-style: italic;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+.table-responsive {
+  margin: 20px 0;
+}
+
+.bold,
+b,
+strong {
+  font-weight: 700;
+}
+a{
+  transition: .25s all;
+  &:hover{
+    transition: .25s all;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  // min-width: 992px
+}

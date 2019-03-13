@@ -1,0 +1,193 @@
+html.no-touch {
+  &.popup-open {
+    padding-right: 16px;
+  }
+}
+
+html {
+  &.popup-open {
+    overflow: hidden;
+  }
+  &.popup-animation {
+    .popup-inner {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    .mask-pop-overlay {
+      opacity: .84;
+      transition: opacity .15s linear;
+    }
+  }
+  &.html-popup-garally {
+    .popup-inner {
+      background-color: transparent;
+    }
+  }
+  &.html-popup-video,
+  &.html-popup-form {
+    .popup-is-close {
+      top: auto;
+      bottom: 100%;
+    }
+  }
+}
+
+.popup-container {
+  padding: 30px 0;
+  z-index: 2;
+  text-align: center;
+  overflow: auto;
+  &::before,
+  .popup-content {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &::before {
+    content: "";
+    height: 100%;
+    margin-right: -.25em;
+    width: 0;
+  }
+  .container .container {
+    padding: 0;
+  }
+}
+.touch{
+  .popup-content,
+  .popup-container{
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.popup-content {
+  //overflow-x: hidden;
+  position: relative;
+  left: 2px;
+  z-index: 2;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  &.width-auto {
+    width: auto;
+  }
+  &.no-element {
+    width: auto;
+    .popup-inner {
+      background: $white;
+      padding: 30px 40px;
+      >* {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.popup-inner {
+  position: relative;
+  z-index: 10;
+  background: $white;
+  opacity: 0;
+  transform: translate(0, -30px);
+  transition: transform .15s ease-out;
+}
+
+.popup-video {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  .embed-responsive-item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/ajax-loader.svg");
+    background-color: $white;
+  }
+}
+
+.mod-popup,
+.mod-popup-static {
+  @include position(fixed,
+  0,
+  0,
+  0,
+  0,
+  9999);
+  overflow: hidden;
+  overflow-y: auto;
+  display: none;
+}
+
+.popup-show {
+  display: block !important;
+}
+
+.popup-is-close {
+  @include position(absolute,
+  20px,
+  19px,
+  null,
+  null,
+  5);
+  @include sizeEx(41px);
+  @include font(null,
+  22px,
+  rgba(30, 30, 31, .5));
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  background: $white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  padding: 9px;
+  line-height: 0;
+  &.btn {
+    height: auto;
+  }
+}
+
+.popup-video .popup-is-close {
+  top: -55px !important;
+}
+
+.mask-pop-overlay {
+  @include position(fixed,
+  0,
+  0,
+  0,
+  0);
+  background-color: $gray-900;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(.47, 0, .74, .71);
+}
+
+.ie {
+  .gallary-item {
+    img {
+      margin: 0;
+    }
+  }
+}
+
+.gallary-item {
+  text-align: center;
+  max-height: 82vh;
+  height: 100vw;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin: 0 auto;
+    max-height: 80vh;
+  }
+}
+
+.none-event {
+  pointer-events: none;
+}
+
+@include media-custom-up(1500) {
+  .popup-video {
+    max-width: 1200px;
+  }
+}

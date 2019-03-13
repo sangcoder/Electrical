@@ -1,0 +1,40 @@
+<!-- module 'Modconnection' -->
+<section class="module modconnection">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 connection-left">
+        <div class="rectangle-orange">
+          {% for item in connectionTeam.listImageLeft %}
+          <img class="{{ item.clsPos }}" src="{{ item.urlImg }}" alt="item.altImg">
+          {% endfor %}
+
+        </div>
+      </div>
+      <div class="col-lg-6 connection-right">
+        <div class="heading-image">
+            <h2>
+              The AZ Electrical
+                Connection Team
+              </h2>
+            <img class="right" src="images/heading-bg.png" alt="">
+          </div>
+          {{ connectionTeam.conectionPara1 }}
+        <div class="row">
+          {% for item in connectionTeam.listCompa %}
+          <div class="col-4">
+              <div class="connection-icon">
+                <img src=" {{item.image}} " alt=" {{ item.text }}">
+              </div>
+              {{ item.text }}
+            </div>
+          {% endfor %}
+        </div>
+        {{connectionTeam.h3Connection}}
+        {{ connectionTeam.connectionPara2 }}
+          <a href="#" title="View Services" class="btn btn-primary">View Services</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>

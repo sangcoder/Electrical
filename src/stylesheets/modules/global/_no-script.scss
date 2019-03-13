@@ -1,0 +1,9 @@
+#mod-noscript {
+  @include position(fixed, 0, 0, 0, 0, 99999);
+  background-color: #000;
+  color: $white;
+  h3 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,19 @@
+img.b-loaded {
+  animation: opacity 1s;
+}
+
+img.lazy:not(.b-loaded) {
+  margin: 0 auto;
+  opacity: 0;
+  display: block;
+  width: auto !important;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

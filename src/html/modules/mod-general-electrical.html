@@ -1,0 +1,45 @@
+<!-- module 'Mod General Electrical' -->
+<section class="module mod-general-electrical">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-9 general-content">
+              <div class="heading-image">
+                  {{generalSection.headingTitle}}
+                  <img src="images/heading-bg.png">
+                </div>
+            {{ generalSection.generalDes }}
+          </div>
+          <div class="col-lg-3 d-flex align-items-center">
+            <p>
+              <a href="#" title="Free Estimate" class="btn btn-primary">Free Estimate</a>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 list-service">
+            <h3>Outdoor & Garage</h3>
+            <ul>
+              {% for item in generalSection.listOutdoor %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-md-4 list-service">
+            <h3>Inspection & Repair</h3>
+            <ul>
+                {% for item in generalSection.listInspection %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-md-4 list-service">
+            <h3>Installation & Replacement</h3>
+            <ul>
+                {% for item in generalSection.listInstallation %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+</section>

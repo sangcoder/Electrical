@@ -1,0 +1,72 @@
+<!-- module 'Mod Send Message' -->
+<section class="module mod-send-message">
+  <div class="container">
+    <div class="heading-image">
+      <h2>Send us a message</h2>
+      <p>Contact us for a FREE quote or with any questions. We'll get back to you as soon as possible. Feel free to also
+        call or email us directly.</p>
+      <img src="images/heading-bg.png" alt="">
+    </div>
+    <div class="row">
+      <div class="col-lg-8 message-left">
+        <form action="#">
+          <div class="row">
+            <div class="col-lg-6">
+              {{ formBlock("Name") }}
+            </div>
+            <div class="col-lg-6">
+              {{ formBlock("Email") }}
+            </div>
+            <div class="col-lg-6">
+              {{ formBlock("Phone (Optional)") }}
+            </div>
+            <div class="col-lg-6">
+              {{ formBlock("Company (Optional)") }}
+            </div>
+            <div class="col-lg-6">
+              {{ formBlock("Type of Service Needed ") }}
+            </div>
+            <div class="col-lg-12">
+              {{ textarea("Message (Optional)") }}
+            </div>
+          </div>
+
+          <p> <button type="submit" class="btn btn-primary">Submit</button> </p>
+        </form>
+
+      </div>
+      <div class="col-lg-4 message-right">
+        <div class="message-item">
+          <div class="message-icon">
+            <img src="images/phone-icon.png" alt="Phone">
+          </div>
+          <div class="message-content phone">
+            520.850.1004
+          </div>
+        </div>
+        <div class="message-item">
+          <div class="message-icon">
+            <img src="images/mail-icon.png" alt="Phone">
+          </div>
+          <div class="message-content">
+            info@
+            azelectricalconnection.com
+          </div>
+        </div>
+        <div class="message-item">
+          <div class="message-icon">
+            <img src="images/map-icon.png" alt="Phone">
+          </div>
+          <div class="message-content">
+            <p>AZ Electrical Connection <br>
+              8340 North Thornydale Rd. <br>
+              #110-316 <br>
+              Tucson, AZ 85741 <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

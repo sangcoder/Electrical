@@ -1,0 +1,81 @@
+// module 'Mod Residental'
+.mod-residental {
+  margin-top: 40px;
+}
+
+.residental-heading {
+  position: relative;
+  h2 {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    &::after {
+      content: "";
+      @include sizeEx(40px, 4px);
+      @include position(absolute, null, null, 3px, 50%);
+      transform: translateX(-50%);
+      margin-bottom: -5px;
+      background-color: $blue;
+      border-radius: 5px;
+    }
+  }
+  img {
+    display: inline-block;
+    @include position(absolute, -40px, null, null, -30px, 0);
+    width: 110px;
+  }
+}
+.resindental-slide {
+  margin-top: 20px;
+  .slick-prev,
+  .slick-next {
+    font-size: 50px;
+    &:hover {
+      color: $blue;
+    }
+  }
+  .slick-dots {
+    bottom: -40px;
+    li {
+      button {
+        background: #a1a0a1;
+        border: none;
+        width: 15px;
+        height: 15px;
+      }
+      &.slick-active,
+      &:hover {
+        button {
+          background: $blue;
+        }
+      }
+    }
+  }
+}
+
+.slide-item {
+  .residental-img {
+    img {
+      @include sizeEx(100px);
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid $blue;
+    }
+  }
+}
+.residental-content {
+  p {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+}
+.residental-signature {
+  p {
+    font-weight: 700;
+  }
+  img {
+    display: inline-block;
+  }
+}
